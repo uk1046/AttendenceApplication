@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SheetActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#00BCD4"
+        app:titleTextColor="@android:color/white">
+
+        <TextView
+            android:id="@+id/title_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Attendance Sheet"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"/>
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:id="@+id/layoutone">
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:padding="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <TableLayout
+                    android:id="@+id/tableLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:divider="@drawable/table_divider"
+                    android:showDividers="beginning|middle|end"
+                    android:stretchColumns="x"
+                    android:dividerHeight="1dp">
+
+                </TableLayout>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout2"
+        android:padding="24dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add001"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:background="#00BCD4"
+            android:src="@android:drawable/stat_sys_download"/>
+    </RelativeLayout>
+</LinearLayout>
